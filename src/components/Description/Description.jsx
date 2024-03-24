@@ -2,11 +2,11 @@ import React from 'react';
 import TextTruncate from 'react-text-truncate';
 import { Text } from './Description.styled';
 
-function Description({text}) {
+function Description({ text }) {
     return (
         <Text>
       <TextTruncate
-        line={1}
+        line={0.8}
         element="span"
         truncateText="…"
         text={text}

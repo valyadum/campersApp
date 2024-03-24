@@ -1,57 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SvgIcon } from 'components/icons/SvgIcon';
 import Details from 'components/Details/Details';
-import { BtnMore, CardHeader, CardStyle, InfoCont, PriceCont } from './Card.styled';
+import { BtnHeart, BtnMore, CardHeader, CardStyle, InfoCont, PriceCont, Rating } from './Card.styled';
 import Description from 'components/Description/Description';
+import Modal from 'components/Modal/Modal';
 
-function Card({ campers }) {
+function Card({ camper }) { 
+  const [showModal, setShowModal] = useState(false);
+  const [idCard, setIdCard] = useState();
+
+  // function openModal(id) {
+  //   console.log('modal', id);
+  //   setShowModal(true);
+  // }
+    const showModalToggle = (id) => {
+      setShowModal(!showModal);
+      setIdCard(id);
+        // console.log('modal', id);
+    };
+  const {id,
+    name,
+    price,
+    rating,
+    location,
+    adults,
+    engine,
+    transmission,
+    description,
+    details,
+    gallery,
+    reviews,
+    favorite,
+  } = camper;
   return (
     <>
-      {campers?.map(
-        ({
-          id,
-          name,
-          price,
-          rating,
-          location,
-          adults,
-          children,
-          engine,
-          transmission,
-          form,
-          length,
-          width,
-          height,
-          tank,
-          consumption,
-          description,
-          details,
-          gallery,
-          reviews,
-        }) => {
-          return (
+     
             <CardStyle key={id}>
               <img src={gallery[0]} alt={name} />
               <div>
                 <CardHeader>
                   <h4>{name}</h4>
                   <PriceCont>
-                    <p>&#8364;{price}</p>
-                    <button>
+                    <p>
+                      &#8364;
+                      {price.toFixed(2)}
+                    </p>
+                    <BtnHeart>
                       <SvgIcon
                         id="heart"
                         style={{
-                          fill: 'none',
-                          stroke: 'black',
+                          fill: ` ${favorite ? 'red' : 'none'}`,
+                          stroke: ` ${
+                            favorite ? 'red' : 'var(--dark-text-color)'
+                          }`,
                           width: 24,
                           height: 24,
                         }}
                       />
-                    </button>
+                    </BtnHeart>
                   </PriceCont>
                 </CardHeader>
                 <InfoCont>
-                  <div>
+                  <Rating>
                     <SvgIcon
                       id="star"
                       style={{
@@ -62,13 +72,13 @@ function Card({ campers }) {
                       }}
                     />
                     {rating}({reviews.length} Reviews)
-                  </div>
+                  </Rating>
                   <div>
                     <SvgIcon
                       id="map-pin"
                       style={{
                         fill: 'none',
-                        stroke: 'black',
+                        stroke: 'var(--dark-text-color)',
                         width: 16,
                         height: 16,
                       }}
@@ -83,12 +93,18 @@ function Card({ campers }) {
                   engine={engine}
                   details={details}
                 />
-                <BtnMore type="button">Show more</BtnMore>
+                <BtnMore type="button" onClick={() => showModalToggle(id)}>
+                  Show more
+                </BtnMore>
+                {showModal && (
+                  <Modal
+                    onClose={showModalToggle}
+                    id={idCard}
+                  />
+                )}
               </div>
             </CardStyle>
-          );
-        }
-      )}
+
     </>
   );
 }

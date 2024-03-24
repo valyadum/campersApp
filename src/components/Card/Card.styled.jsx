@@ -5,7 +5,7 @@ export const CardStyle = styled.li`
   border: 1px solid rgba(16, 24, 40, 0.2);
   display: flex;
   border-radius: 20px;
-  width: 100%;
+  width: 888px;
   height: 358px;
   padding: 24px;
   gap: 24px;
@@ -26,9 +26,14 @@ export const CardHeader = styled.div`
 `;
 export const PriceCont = styled.div`
     display: flex;
-    button{
-        background-color: transparent;
-    }
+
+`;
+export const BtnHeart = styled.button`
+   background-color: transparent;
+   padding:0px 10px;
+   :hover{
+    transform: scale(1.1);
+   }
 `;
 export const InfoCont = styled.div`
    display:flex ;
@@ -51,4 +56,8 @@ export const BtnMore = styled.button`
   letter-spacing: -0.08px;
   padding: 16px 40px;
   border-radius: 200px;
+`;
+export const Rating = styled.div`
+  text-decoration: underline var(--dark-text-color);
+
 `;

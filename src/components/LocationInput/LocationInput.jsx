@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { SvgIcon } from 'components/icons/SvgIcon';
+import { InputField, Text } from './LocationInput.styled';
 
 function LocationInput({ getChangeFilter }) {
   const [location, setLocation] = useState('');
@@ -15,15 +16,15 @@ function LocationInput({ getChangeFilter }) {
 
   return (
     <>
-      <p>Location</p>
-      <div>
+      <Text>Location</Text>
+      <InputField>
         <SvgIcon
           id="map-pin"
           style={{
             fill: 'none',
-            stroke: 'black',
-            width: 16,
-            height: 16,
+            stroke: 'var(--dark-text-color)',
+            width: 18,
+            height: 20,
           }}
         />
         <input
@@ -32,7 +33,7 @@ function LocationInput({ getChangeFilter }) {
           value={location}
           onChange={event => setLocation(event.target.value)}
         />
-      </div>
+      </InputField>
     </>
   );
 }
