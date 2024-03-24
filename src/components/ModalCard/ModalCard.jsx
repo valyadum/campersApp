@@ -60,7 +60,7 @@ function ModalCard({ id,onClose }) {
       <Price>
         <p>
           &#8364;
-          {price.toFixed(2)}
+          {price?.toFixed(2)}
         </p>
       </Price>
       <ImgContainer>
