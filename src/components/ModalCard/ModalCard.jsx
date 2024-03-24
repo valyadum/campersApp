@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchOneCamper } from 'redax/operation';
 import { ChangeBtn, Header, Image, ImgContainer,  NewLine, PlusBox, Price, TextDesc } from './ModalCard.styled';
 
-function ModalCard({ id,onClose }) {
+function ModalCard({ id, onClose }) {
   const [type, setType] = useState(true)
   console.log(id);
   const dispatch = useDispatch();
@@ -55,7 +55,7 @@ function ModalCard({ id,onClose }) {
             height: 16,
           }}
         />
-        {rating}Reviews
+        {rating}({reviews?.length} Reviews)
       </Rating>
       <Price>
         <p>
@@ -82,20 +82,6 @@ function ModalCard({ id,onClose }) {
         {type ? <Features data={data} /> : <Reviews data={reviews} />}
         <Form />
       </PlusBox>
-
-      {/* <LinkContainer>
-        <li>
-          <Link to="features">Features</Link>
-          <hr />
-        </li>
-        <li>
-          <Link to="reviews">Reviews</Link>
-        </li>
-      </LinkContainer>
-      <PlusBox>
-        <Outlet data={data} />
-        <Form /> 
-      </PlusBox> */}
     </>
   );
 }

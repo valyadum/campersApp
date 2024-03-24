@@ -15,6 +15,7 @@ function Features({ data }) {
     height,
     tank,
     consumption,
+    details
   } = data;
   const {
     CD,
@@ -28,7 +29,7 @@ function Features({ data }) {
     shower,
     toilet,
     water,
-  } = data.details;
+  } = details;
   return (
     <ChangePart>
       <ListDetails>
