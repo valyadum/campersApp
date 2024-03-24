@@ -10,7 +10,6 @@ function Description({ text }) {
         element="span"
         truncateText="…"
         text={text}
-        // textTruncateChild={<a href="#">Read on</a>}
             />
         </Text>
     );
