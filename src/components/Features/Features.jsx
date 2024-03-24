@@ -102,9 +102,9 @@ function Features({ data }) {
                   height: 20,
                 }}
               />
-              <p>{details.beds} beds</p>
+              <p>{details?.beds} beds</p>
             </DetailsBtn>
-            {details.airConditioner >= 1 && (
+            {details?.airConditioner >= 1 && (
               <DetailsBtn>
                 <SvgIcon
                   id="air-conditioner"
@@ -118,7 +118,7 @@ function Features({ data }) {
                 <p>AC</p>
               </DetailsBtn>
             )}
-            {details.CD >= 1 && (
+            {details?.CD >= 1 && (
               <DetailsBtn>
                 <SvgIcon
                   id="cd"
@@ -132,7 +132,7 @@ function Features({ data }) {
                 <p>CD</p>
               </DetailsBtn>
             )}
-            {details.radio >= 1 && (
+            {details?.radio >= 1 && (
               <DetailsBtn>
                 <SvgIcon
                   id="radio"
@@ -156,9 +156,9 @@ function Features({ data }) {
                   height: 20,
                 }}
               />
-              <p>{details.hob} hob</p>
+              <p>{details?.hob} hob</p>
             </DetailsBtn>
-            {details.toilet >= 1 && (
+            {details?.toilet >= 1 && (
               <DetailsBtn>
                 <SvgIcon
                   id="toilet"
@@ -172,7 +172,7 @@ function Features({ data }) {
                 <p>Toilet</p>
               </DetailsBtn>
             )}
-            {details.shower >= 1 && (
+            {details?.shower >= 1 && (
               <DetailsBtn>
                 <SvgIcon
                   id="shower"
@@ -186,7 +186,7 @@ function Features({ data }) {
                 <p>Shower</p>
               </DetailsBtn>
             )}
-            {details.freezer >= 1 && (
+            {details?.freezer >= 1 && (
               <DetailsBtn>
                 <SvgIcon
                   id="freezer"
@@ -200,7 +200,7 @@ function Features({ data }) {
                 <p>Freezer</p>
               </DetailsBtn>
             )}
-            {details.gas >= 1 && (
+            {details?.gas >= 1 && (
               <DetailsBtn>
                 <SvgIcon
                   id="gas"
@@ -214,7 +214,7 @@ function Features({ data }) {
                 <p>Gas</p>
               </DetailsBtn>
             )}
-            {details.water && (
+            {details?.water && (
               <DetailsBtn>
                 <SvgIcon
                   id="water"
@@ -228,7 +228,7 @@ function Features({ data }) {
                 <p>Water</p>
               </DetailsBtn>
             )}
-            {details.microwave >= 1 && (
+            {details?.microwave >= 1 && (
               <DetailsBtn>
                 <SvgIcon
                   id="microwave"
