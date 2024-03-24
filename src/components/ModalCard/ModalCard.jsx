@@ -55,7 +55,7 @@ function ModalCard({ id,onClose }) {
             height: 16,
           }}
         />
-        {rating}({reviews.length} Reviews)
+        {rating}Reviews
       </Rating>
       <Price>
         <p>
