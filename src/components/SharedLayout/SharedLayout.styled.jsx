@@ -5,13 +5,13 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
- padding: 20px 30px;
- position: static;
- z-index: 22;
+  padding: 20px 30px;
+  position: static;
+  z-index: 22;
 `;
 export const Nav = styled.nav`
-    display: flex;
-    gap:10px;
+  display: flex;
+  gap: 10px;
 `;
 export const Logo = styled.div`
   display: flex;
@@ -20,6 +20,5 @@ export const Logo = styled.div`
   p {
     font-size: 30px;
     letter-spacing: -0.09em;
-   
   }
 `;

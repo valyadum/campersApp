@@ -1,9 +1,15 @@
-import React from 'react'
-import { BtnSend, FormContainer, FormHeader, Text, UserForm } from './Form.styled';
+import React from 'react';
+import {
+  BtnSend,
+  FormContainer,
+  FormHeader,
+  Text,
+  UserForm,
+} from './Form.styled';
 
 function Form() {
   return (
-    <FormContainer >
+    <FormContainer>
       <FormHeader>Book your campervan now</FormHeader>
       <Text>Stay connected! We are always ready to help you.</Text>
       <UserForm>
@@ -16,11 +22,11 @@ function Form() {
           cols="30"
           rows="10"
           placeholder="Comment"
-              ></textarea>
-              <BtnSend>Send</BtnSend>
+        ></textarea>
+        <BtnSend>Send</BtnSend>
       </UserForm>
     </FormContainer>
   );
 }
 
-export default Form
+export default Form;

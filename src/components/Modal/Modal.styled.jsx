@@ -22,7 +22,7 @@ export const ModalStyle = styled.div`
   overflow: auto;
 `;
 
-export const CloseBtn=styled.button`
-    background-color: transparent;
-    padding: 0;
-`
+export const CloseBtn = styled.button`
+  background-color: transparent;
+  padding: 0;
+`;

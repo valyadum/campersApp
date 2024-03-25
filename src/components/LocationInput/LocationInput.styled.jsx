@@ -4,10 +4,8 @@ export const Text = styled.p`
   color: rgba(16, 24, 40, 0.6);
   font-weight: 500;
   margin-bottom: 8px;
-
 `;
 export const InputField = styled.div`
-  /* border: 1px solid blue; */
   background-color: var(--input-background);
   border-radius: 10px;
   width: 360px;
@@ -18,7 +16,7 @@ export const InputField = styled.div`
   input {
     background-color: inherit;
     border: none;
-   &::placeholder {
+    &::placeholder {
       color: var(--dark-text-color);
       line-height: 1.25;
     }

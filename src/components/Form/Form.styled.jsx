@@ -1,7 +1,6 @@
 import { styled } from 'styled-components';
 
 export const FormContainer = styled.div`
-  /* background-color: lightblue; */
   border-radius: 10px;
   border: 1px solid rgba(16, 24, 40, 0.2);
   width: 50%;
@@ -15,7 +14,7 @@ export const FormHeader = styled.p`
   margin-bottom: 8px;
 `;
 export const Text = styled.p`
-  color:var(--grey-text-color);
+  color: var(--grey-text-color);
   line-height: 1.5;
   margin-bottom: 24px;
 `;

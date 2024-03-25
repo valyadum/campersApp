@@ -1,13 +1,17 @@
-import { CheckContainer, ContainerFilter, HeaderFilter, Line } from '../FirstFilter/FirstFilter.styled';
+import {
+  CheckContainer,
+  ContainerFilter,
+  HeaderFilter,
+  Line,
+} from '../FirstFilter/FirstFilter.styled';
 import { SvgIcon } from 'components/icons/SvgIcon';
 import React, { useEffect, useState } from 'react';
 
-function SecondFilter({ getChangeFilter}) {
+function SecondFilter({ getChangeFilter }) {
   const [type, setType] = useState();
 
   useEffect(() => {
-    // console.log(type);
-      getChangeFilter(type);
+    getChangeFilter(type);
   }, [type, getChangeFilter]);
   return (
     <>

@@ -3,7 +3,12 @@ import { SvgIcon } from 'components/icons/SvgIcon';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectIsLoading } from 'redax/selector';
-import { ChangePart, DescribeContainer, DescribeItem, Details } from './Features.styled';
+import {
+  ChangePart,
+  DescribeContainer,
+  DescribeItem,
+  Details,
+} from './Features.styled';
 
 function Features({ data }) {
   const isLoading = useSelector(selectIsLoading);
@@ -18,22 +23,8 @@ function Features({ data }) {
     height,
     tank,
     consumption,
-    details
+    details,
   } = data;
-  
-  // const {
-  //   CD,
-  //   airConditioner,
-  //   beds,
-  //   freezer,
-  //   gas,
-  //   hob,
-  //   microwave,
-  //   radio,
-  //   shower,
-  //   toilet,
-  //   water,
-  // } = details;
 
   return (
     <>

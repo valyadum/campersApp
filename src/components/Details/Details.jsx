@@ -3,8 +3,6 @@ import { SvgIcon } from 'components/icons/SvgIcon';
 import { DetailsBtn, ListDetails } from './Details.styled';
 
 function Details({ adults, transmission, engine, details }) {
-
-
   return (
     <ListDetails>
       <DetailsBtn>

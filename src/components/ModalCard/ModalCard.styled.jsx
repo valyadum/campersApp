@@ -7,15 +7,14 @@ export const LinkContainer = styled.ul`
   font-weight: 600;
   line-height: 1.2;
 `;
-export const Header= styled.div`
-    display: flex;
-    justify-content: space-between;
-`
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 export const PlusBox = styled.div`
-/* background-color: aqua; */
-display: flex;
-width: 100%;
-margin-top: 44px;
+  display: flex;
+  width: 100%;
+  margin-top: 44px;
 `;
 export const ChangeBtn = styled.button`
   font-size: 20px;
@@ -25,7 +24,6 @@ export const ChangeBtn = styled.button`
   padding: 0;
   margin: 0;
   margin-right: 40px;
-  
 `;
 export const NewLine = styled.hr`
   width: 902px;
@@ -49,11 +47,11 @@ export const Image = styled.img`
   object-fit: cover;
 `;
 export const ImgContainer = styled.div`
-    display: flex;
-    gap: 16px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 `;
-export const TextDesc= styled.p`
-    margin-bottom: 44px;
-`
+export const TextDesc = styled.p`
+  margin-bottom: 44px;
+`;

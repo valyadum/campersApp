@@ -5,13 +5,8 @@ import { InputField, Text } from './LocationInput.styled';
 function LocationInput({ getChangeFilter }) {
   const [location, setLocation] = useState('');
 
-  //   function onChangeLocation(event) {
-  //     console.log(event.target.value);
-  //     setLocation(event.target.value);
-  //   }
   useEffect(() => {
-    //   console.log(location);
-      getChangeFilter(location);
+    getChangeFilter(location);
   }, [location, getChangeFilter]);
 
   return (

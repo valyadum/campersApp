@@ -10,13 +10,11 @@ export const HomePageStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
 `;
 export const MainText = styled.p`
-    background-color: #9f9fa842;
-    z-index: 37;
-    width: 600px;
-    color: #ece7df;
-    padding: 20px;
-
+  background-color: #9f9fa842;
+  z-index: 37;
+  width: 600px;
+  color: #ece7df;
+  padding: 20px;
 `;

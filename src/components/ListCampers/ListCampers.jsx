@@ -18,8 +18,6 @@ function ListCampers() {
   // const [totalPage, setTotalPage] = useState(4);
   const totalPage = 5;
 
-  // console.log(campers);
-
   useEffect(() => {
     if (loadedBefore.current) {
       if (page === 1) {
@@ -34,8 +32,6 @@ function ListCampers() {
   function onClickLoadMore(event) {
     loadedBefore.current = false;
     setPage(prev => prev + 1);
-    // console.log(event);
-    //  setPage(page + 1);
     if (page === 1) {
       setCampers(camperArray);
     } else {
@@ -48,7 +44,9 @@ function ListCampers() {
   return (
     <ListSection>
       <CardList>
-        {campers?.map(camper => <Card key={camper.id} camper={camper} />)}
+        {campers?.map(camper => (
+          <Card key={camper.id} camper={camper} />
+        ))}
       </CardList>
       {page < totalPage && (
         <LoadMore type="button" onClick={onClickLoadMore}>

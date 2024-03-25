@@ -1,7 +1,7 @@
 import ModalCard from 'components/ModalCard/ModalCard';
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import {  ModalStyle, Overlay } from './Modal.styled';
+import { ModalStyle, Overlay } from './Modal.styled';
 
 const modalRoot = document.querySelector('#root-modal');
 

@@ -1,6 +1,11 @@
 import { SvgIcon } from 'components/icons/SvgIcon';
-import React, { useEffect, useState } from 'react'
-import { CheckContainer, ContainerFilter, HeaderFilter, Line } from './FirstFilter.styled';
+import React, { useEffect, useState } from 'react';
+import {
+  CheckContainer,
+  ContainerFilter,
+  HeaderFilter,
+  Line,
+} from './FirstFilter.styled';
 
 function FirstFilter({ getChangeFilter }) {
   const [equipmentArray, setEquipmentArray] = useState([]);
@@ -14,11 +19,6 @@ function FirstFilter({ getChangeFilter }) {
       setEquipmentArray(equipmentArray.filter(event => event !== value));
     }
   }
-  // function onFilter(event) {
-  //     event.preventDefault();
-  //     console.log(equipmentArray);
-
-  // }
   useEffect(() => {
     console.log(equipmentArray);
     getChangeFilter(equipmentArray);
@@ -26,9 +26,8 @@ function FirstFilter({ getChangeFilter }) {
   return (
     <>
       <HeaderFilter>Vehicle equipment</HeaderFilter>
-        <Line />
+      <Line />
       <ContainerFilter>
-       
         <CheckContainer>
           <SvgIcon
             id="air-conditioner"
@@ -124,4 +123,4 @@ function FirstFilter({ getChangeFilter }) {
   );
 }
 
-export default FirstFilter
+export default FirstFilter;

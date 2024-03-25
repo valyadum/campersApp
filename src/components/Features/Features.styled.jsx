@@ -19,11 +19,11 @@ export const Details = styled.div`
     margin: 24px 0;
   }
 `;
-export const DescribeContainer=styled.div`
+export const DescribeContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
-`
+`;
 export const DescribeItem = styled.div`
   display: flex;
   margin-right: 24px;

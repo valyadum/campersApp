@@ -1,8 +1,7 @@
 import { SvgIcon } from 'components/icons/SvgIcon';
-import React from 'react'
+import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { Header, Logo, Nav } from './SharedLayout.styled';
-
 
 function SharedLayout() {
   return (

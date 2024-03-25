@@ -1,4 +1,4 @@
-import { CardHeader,  Rating } from 'components/Card/Card.styled';
+import { CardHeader, Rating } from 'components/Card/Card.styled';
 import Features from 'components/Features/Features';
 import Form from 'components/Form/Form';
 import { SvgIcon } from 'components/icons/SvgIcon';
@@ -8,26 +8,26 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchOneCamper } from 'redax/operation';
-import { ChangeBtn, Header, Image, ImgContainer,  NewLine, PlusBox, Price, TextDesc } from './ModalCard.styled';
+import {
+  ChangeBtn,
+  Header,
+  Image,
+  ImgContainer,
+  NewLine,
+  PlusBox,
+  Price,
+  TextDesc,
+} from './ModalCard.styled';
 
 function ModalCard({ id, onClose }) {
-  const [type, setType] = useState(true)
-  console.log(id);
+  const [type, setType] = useState(true);
   const dispatch = useDispatch();
   const data = useSelector(state => state.campers.camper);
-  console.log(data);
   useEffect(() => {
     dispatch(fetchOneCamper(id));
   }, [id, dispatch]);
 
-  const {
-    name,
-    price,
-    rating,
-    description,
-    gallery,
-    reviews,
-  } = data;
+  const { name, price, rating, description, gallery, reviews } = data;
 
   return (
     <>

@@ -13,7 +13,6 @@ export const fetchCampers = createAsyncThunk(
         axios.defaults.baseURL = url.href;
         try {
             const response = await axios.get("");
-            // console.log(response.data);
             // При успішному запиті повертаємо проміс із даними
             return response.data;
         } catch (e) {
@@ -30,12 +29,24 @@ export const fetchOneCamper = createAsyncThunk(
         axios.defaults.baseURL ='https://65fa96843909a9a65b1ace0a.mockapi.io';
         try {
             const response = await axios.get(`/campers/${id}`);
-            // console.log(response.data);
             // При успішному запиті повертаємо проміс із даними
             return response.data;
         } catch (e) {
             // При помилці запиту повертаємо проміс
             // який буде відхилений з текстом помилки
+            return thunkAPI.rejectWithValue(e.message);
+        }
+    }
+);
+export const addToFavorite = createAsyncThunk(
+    "camper/addToFavorite",
+    async (setFavorite,id, thunkAPI) => {
+
+        axios.defaults.baseURL = 'https://65fa96843909a9a65b1ace0a.mockapi.io';
+        try {
+            const response = await axios.patch(`/campers/${id}/`);
+            return response.data;
+        } catch (e) {
             return thunkAPI.rejectWithValue(e.message);
         }
     }
