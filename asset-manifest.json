@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/campersApp/static/css/main.ed17489b.css",
-    "main.js": "/campersApp/static/js/main.75663542.js",
+    "main.js": "/campersApp/static/js/main.9781e8e7.js",
     "static/media/sprite.svg": "/campersApp/static/media/sprite.c99c89ae063f4aea3fd49532b8ca47ab.svg",
     "index.html": "/campersApp/index.html",
     "main.ed17489b.css.map": "/campersApp/static/css/main.ed17489b.css.map",
-    "main.75663542.js.map": "/campersApp/static/js/main.75663542.js.map"
+    "main.9781e8e7.js.map": "/campersApp/static/js/main.9781e8e7.js.map"
   },
   "entrypoints": [
     "static/css/main.ed17489b.css",
-    "static/js/main.75663542.js"
+    "static/js/main.9781e8e7.js"
   ]
 }
