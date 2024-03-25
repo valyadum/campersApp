@@ -1,11 +1,13 @@
 import React from 'react';
-import TextTruncate from 'react-text-truncate';
 import { Text } from './Description.styled';
+import { Typography } from '@mui/material';
 
 function Description({ text }) {
   return (
     <Text>
-      <TextTruncate line={0.8} element="span" truncateText="…" text={text} />
+      <Typography noWrap style={{width:520}}>
+       {text}
+      </Typography>
     </Text>
   );
 }
