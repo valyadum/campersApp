@@ -40,11 +40,12 @@ export const fetchOneCamper = createAsyncThunk(
 );
 export const addToFavorite = createAsyncThunk(
     "camper/addToFavorite",
-    async (setFavorite,id, thunkAPI) => {
+    async (info, thunkAPI) => {
 
         axios.defaults.baseURL = 'https://65fa96843909a9a65b1ace0a.mockapi.io';
         try {
-            const response = await axios.patch(`/campers/${id}/`);
+            const favorite = info.favorite;
+            const response = await axios.put(`/campers/${info.id}/`,{"favorite":favorite});
             return response.data;
         } catch (e) {
             return thunkAPI.rejectWithValue(e.message);

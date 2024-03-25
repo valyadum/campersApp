@@ -20,7 +20,7 @@ function FirstFilter({ getChangeFilter }) {
     }
   }
   useEffect(() => {
-    console.log(equipmentArray);
+    // console.log(equipmentArray);
     getChangeFilter(equipmentArray);
   }, [equipmentArray, getChangeFilter]);
   return (

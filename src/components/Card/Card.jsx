@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SvgIcon } from 'components/icons/SvgIcon';
 import Details from 'components/Details/Details';
 import {
@@ -12,21 +12,29 @@ import {
 } from './Card.styled';
 import Description from 'components/Description/Description';
 import Modal from 'components/Modal/Modal';
+import { useDispatch } from 'react-redux';
+import { addToFavorite } from 'redax/operation';
 
 function Card({ camper }) {
   const [showModal, setShowModal] = useState(false);
   const [idCard, setIdCard] = useState();
   const [favoriteCar, setFavoriteCar] = useState(false);
+  const [data, setData] = useState({});
+  const dispatch = useDispatch();
 
   const showModalToggle = id => {
     setShowModal(!showModal);
     setIdCard(id);
   };
-  function onAddToFavorite() {
-    setFavoriteCar(true);
-    console.log(favoriteCar);
 
+  function onAddToFavorite(id) {
+    setFavoriteCar(!favoriteCar);
+    setData({
+      favorite: favoriteCar,
+      id: id,
+    });
   }
+
   const {
     id,
     name,
@@ -40,8 +48,15 @@ function Card({ camper }) {
     details,
     gallery,
     reviews,
-    favorite,
+    favorite
   } = camper;
+
+  useEffect(() => {
+    if (data.id) {
+      dispatch(addToFavorite(data));
+    }
+  }, [dispatch, data,favoriteCar]);
+
   return (
     <>
       <CardStyle key={id}>
@@ -54,14 +69,16 @@ function Card({ camper }) {
                 &#8364;
                 {price.toFixed(2)}
               </p>
-              <BtnHeart onClick={onAddToFavorite}>
+              <BtnHeart onClick={() => onAddToFavorite(id)}>
                 <SvgIcon
                   id="heart"
                   style={{
                     fill: ` ${favorite ? 'red' : 'none'}`,
-                    stroke: ` ${favorite ? 'red' : 'var(--dark-text-color)'}`,
-                    width: 24,
-                    height: 24,
+                    stroke: ` ${
+                      favorite ? 'red' : 'var(--dark-text-color)'
+                    }`,
+                    width: 22,
+                    height: 22,
                   }}
                 />
               </BtnHeart>
